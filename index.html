@@ -47,7 +47,7 @@
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
 
-        <a href="#" onclick="Modal.open()" class="button new"
+        <a href="#" onclick="Modal.verifyOpenClose()" class="button new"
           >+ Nova Transação</a
         >
 
@@ -136,7 +136,7 @@
             </div>
 
             <div class="input-group actions">
-              <a href="#" onclick="Modal.close()" class="button cancel"
+              <a href="#" onclick="Modal.verifyOpenClose()" class="button cancel"
                 >Cancelar</a
               >
               <button>Salvar</button>
@@ -146,21 +146,8 @@
       </div>
     </div>
 
-    <footer><p>app.Finances</p></footer>
+    <footer><p>2021 - app.Finances</p></footer>
 
-    <script>
-      const Modal = {
-        open() {
-          // Abrir Modal
-          // Adicionar a class active do Modal
-          document.querySelector(".modal-overlay").classList.add("active");
-        },
-        close() {
-          // fechar o modal
-          // remover a class active do modal
-          document.querySelector(".modal-overlay").classList.remove("active");
-        },
-      };
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
