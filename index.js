@@ -15,32 +15,35 @@ const Modal = {
   },
 };
 
-const transactions = [
-  {
-    id: 1,
-    description: "luz",
-    amount: -50004,
-    date: "04/02/2021",
-  },
-  {
-    id: 2,
-    description: "Website",
-    amount: 500018,
-    date: "04/02/2021",
-  },
-  {
-    id: 3,
-    description: "internet",
-    amount: -20000,
-    date: "04/02/2021",
-  },
-];
-
 const Transaction = {
-  all: transactions,
+  all: [
+    {
+      description: "luz",
+      amount: -50004,
+      date: "04/02/2021",
+    },
+    {
+      description: "Website",
+      amount: 500018,
+      date: "04/02/2021",
+    },
+    {
+      description: "internet",
+      amount: -20000,
+      date: "04/02/2021",
+    },
+  ],
 
   add(transaction) {
     Transaction.all.push(transaction);
+
+    App.reload();
+  },
+
+  remove(index) {
+    Transaction.all.splice(index, 1);
+
+    App.reload();
   },
 
   incomes() {
@@ -108,6 +111,10 @@ const DOM = {
       Transaction.total()
     );
   },
+
+  cleanTransaction() {
+    DOM.transactionsContainer.innerHTML = "";
+  },
 };
 
 const Utils = {
@@ -124,8 +131,54 @@ const Utils = {
   },
 };
 
-transactions.forEach(function (transaction) {
-  DOM.addTransaction(transaction);
-});
+const Form = {
+  description: document.querySelector("input#description"),
+  amount: document.querySelector("input#amount"),
+  date: document.querySelector("input#date"),
 
-DOM.updateBalance();
+  getValues() {
+    return {
+      description: Form.description.value,
+      amount: Form.amount.value,
+      date: Form.date.value,
+    };
+  },
+
+  validateFields() {
+    const { description, amount, date } = Form.getValues();
+
+    if (description.trim() === "" || 
+        amount.trim() === "" || 
+        date.trim()) {
+          throw new Error("Por favor preencha todos os campos.");
+    }
+  },
+
+  submit(event) {
+    event.preventDefault();
+
+    try {
+      Form.validateFields();
+      
+    } catch (error) {
+      alert(error.message);
+    }
+  },
+};
+
+const App = {
+  init() {
+    Transaction.all.forEach((transaction) => {
+      DOM.addTransaction(transaction);
+    });
+
+    DOM.updateBalance();
+  },
+  reload() {
+    DOM.cleanTransaction();
+
+    App.init();
+  },
+};
+
+App.init();
