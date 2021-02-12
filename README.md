@@ -4,6 +4,12 @@
 
 ## What I learned
 
+...
+
 ## What I need to improve
 
+...
+
 ## Next Level
+
+...
