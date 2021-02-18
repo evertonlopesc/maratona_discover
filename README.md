@@ -4,11 +4,13 @@
 
 ## Linguagens e Ferramentas
 
-<img src="./img/html.png" alt="HTML" style="vertical-align:top; margin:4px">
-<img src="./img/css.png" alt="CSS" style="vertical-align:top; margin:4px">
-<img src="./img/javascript.png" alt="Javascript" style="vertical-align:top; margin:4px">
-<img src="./img/git.png" alt="Git" style="vertical-align:top; margin:4px">
-<img src="./img/github.png" alt="Gitbub" style="vertical-align:top; margin:4px">
+<p>
+    <img src="./img/html.png" alt="HTML" style="vertical-align:top; margin:4px">
+    <img src="./img/css.png" alt="CSS" style="vertical-align:top; margin:4px">
+    <img src="./img/javascript.png" alt="Javascript" style="vertical-align:top; margin:4px">
+    <img src="./img/git.png" alt="Git" style="vertical-align:top; margin:4px">
+    <img src="./img/github.png" alt="Gitbub" style="vertical-align:top; margin:4px">
+</p>
 
 ## O quê eu aprendi
 
