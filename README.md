@@ -37,5 +37,5 @@
     Quero iniciar com o framework NodeJS, para depois aprender React ainda esse ano e se der tempo iniciarei com Typescript.
 </p>
 <p>
-    Busco para mim um aprendizado com bases solidas e mas sem perda de tempo, codificando todo dia para avançar da melhor forma possível.
+    Busco para mim um aprendizado com bases solidas, mas sem perda de tempo, codificando todo dia para avançar da melhor forma possível.
 </p>
