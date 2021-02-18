@@ -2,6 +2,15 @@
 
 <img src="./img/front-project.png" alt="Screen of the project">
 
+
+## Funcionalidade da Aplicação
+
+<p>O App consiste em um controle de finanças pessoais. Suas funcionalidades são tradadas apenas no Frontend, foi utilizado o LocalStore para armazenar os dados.</p>
+
+<p>A aplicação permite você armazenar dados de receitas e despesas, mostrando a soma dos valores e seu total, além de eliminar linhas caso tenha digitado errado.</p>
+
+<p>No CSS aplicamos o conceito de responsividade, caso a tela seja de um aparelo mobile.</p>
+
 ## Linguagens e Ferramentas
 
 <p>
